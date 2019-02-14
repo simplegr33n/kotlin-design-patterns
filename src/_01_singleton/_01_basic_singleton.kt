@@ -38,9 +38,9 @@ object SingletonExample {
     override fun toString(): String {
         when (singletonValue) {
             // below is a range trick using -Int.MAX_VALUE basically equating to if (singletonValue <= 0)
-            in -Int.MAX_VALUE..0 -> return "Impossible! SingletonExample object #$singletonValue, oh no..."
-            1 -> return "SingletonExample object #$singletonValue, great!"
-            in 2..Int.MAX_VALUE -> return "Impossible! SingletonExample object #$singletonValue, oh no..."
+            in -Int.MAX_VALUE..0 -> return "Impossible! SingletonExample initialized $singletonValue times, oh no..."
+            1 -> return "SingletonExample initialized $singletonValue time, great!"
+            in 2..Int.MAX_VALUE -> return "Impossible! SingletonExample initialized $singletonValue times, oh no..."
             // else is null (uninitialized state)
             else -> return "$singletonValue object. Singleton uninitialized... :("
         }
