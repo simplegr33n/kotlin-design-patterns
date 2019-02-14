@@ -21,16 +21,11 @@ internal class MattressAdapter(width: Double, length: Double, depth: Double) {
     fun makeFit(doorway: Doorway) {
         // The adapter/wrapper class delegates to the legacy object
         while (mattress.width > doorway.height) {
-            println("Folding Mattress (" + mattress.width + ", " + mattress.length + ", " + mattress.depth + ") width-wise")
-            mattress.width = foldMattress(mattress.width)
-            mattress.depth *= 2
-            println("Result Mattress (" + mattress.width + ", " + mattress.length + ", " + mattress.depth + ")")
+            foldMattressWidthwise(mattress)
         }
+
         while (mattress.length > doorway.height) {
-            println("Folding Mattress (" + mattress.width + ", " + mattress.length + ", " + mattress.depth + ") length-wise")
-            mattress.length = foldMattress(mattress.length)
-            mattress.depth *= 2
-            println("Result Mattress (" + mattress.width + ", " + mattress.length + ", " + mattress.depth + ")")
+            foldMattressLengthwise(mattress)
         }
 
         if (mattress.width > doorway.height || mattress.length > doorway.height || mattress.depth > doorway.width) {
@@ -40,9 +35,22 @@ internal class MattressAdapter(width: Double, length: Double, depth: Double) {
         }
     }
 
-    private fun foldMattress (size: Double) : Double {
-        return size / 2
+    private fun foldMattressWidthwise (mattress: Mattress) : Mattress {
+        println("Folding Mattress (" + mattress.width + ", " + mattress.length + ", " + mattress.depth + ") width-wise")
+        mattress.width /= 2
+        mattress.depth *= 2
+        println("Result Mattress (" + mattress.width + ", " + mattress.length + ", " + mattress.depth + ")")
+        return mattress
     }
+
+    private fun foldMattressLengthwise (mattress: Mattress) : Mattress {
+        println("Folding Mattress (" + mattress.width + ", " + mattress.length + ", " + mattress.depth + ") length-wise")
+        mattress.length /= 2
+        mattress.depth *= 2
+        println("Result Mattress (" + mattress.width + ", " + mattress.length + ", " + mattress.depth + ")")
+        return mattress
+    }
+
 }
 
 /* Adapted class */
