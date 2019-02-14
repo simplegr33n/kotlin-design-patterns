@@ -1,4 +1,4 @@
-package singleton
+package _01_singleton
 
 var singletonInstance: SingletonExample? = null
 var testValue: Int = 0
