@@ -35,6 +35,14 @@ abstract class SmartPhone () {
 }
 
 // Sub-Class Definitions
-class SamsungGalaxy(override val ram: Int, override val megapixels: String, override val wifi: Boolean) : SmartPhone()
+class SamsungGalaxy(override val ram: Int, override val megapixels: String, override val wifi: Boolean) : SmartPhone() {
+    init {
+        println("Built a Galaxy!")
+    }
+}
 
-class AppleIPhone(override val ram: Int, override val megapixels: String, override val wifi: Boolean) : SmartPhone()
+class AppleIPhone(override val ram: Int, override val megapixels: String, override val wifi: Boolean) : SmartPhone() {
+    init {
+        println("Built an IPhone!")
+    }
+}

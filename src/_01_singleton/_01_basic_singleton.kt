@@ -1,5 +1,6 @@
 package _01_singleton
 
+
 var singletonInstance: SingletonExample? = null
 var timesInitialized: Int = 0
 
@@ -41,7 +42,7 @@ object SingletonExample {
             // below is a range trick using Int.MAX_VALUE basically equating to if (singletonValue >= 2)
             in 2..Int.MAX_VALUE -> return "Impossible! SingletonExample object #$singletonValue, oh no..."
             // else is null (uninitialized state)
-            else -> return "$singletonValue object"
+            else -> return "$singletonValue object. Singleton uninitialized... :("
         }
     }
 
