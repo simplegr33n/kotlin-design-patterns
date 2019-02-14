@@ -42,6 +42,10 @@ fun main() {
 class SleepSubject {
     var state: SleepState
 
+    var eyesOpen: Boolean? = null
+    var inBed: Boolean? = null
+    var isDreaming: Boolean? = null
+
     val awake = Awake(this)
     val stageOne = StageOne(this)
     val stageTwo = StageTwo(this)
@@ -50,6 +54,9 @@ class SleepSubject {
 
     init {
         println("\"Wake Up!\"")
+        eyesOpen = true
+        inBed = false
+        isDreaming = false
         state = awake
     }
 
@@ -58,36 +65,27 @@ class SleepSubject {
 
     override fun toString(): String {
         return """SLEEP SUBJECT → ${state::class.simpleName}
-        |   eyes open : ${state.eyesOpen}
-        |   in bed : ${state.inBed}
-        |   isDreaming : ${state.isDreaming}
+        |   eyes open : $eyesOpen
+        |   in bed : $inBed
+        |   isDreaming : $isDreaming
         |""".trimMargin()
     }
 }
 
 // Abstract State Interface for SleepState management
 abstract class SleepState(val sleepSubject: SleepSubject) {
-    open var eyesOpen: Boolean? = null
-    open var inBed: Boolean? = null
-    open var isDreaming: Boolean? = null
     open fun progressSleepStage(): Unit = throw UnsupportedOperationException("Operation not supported")
     open fun wakeUp(): Unit = throw UnsupportedOperationException("Operation not supported")
 }
 
 // Concrete Implementations of SleepState (Awake|StageOne|StageTwo|StageThree|REMStage)
 class Awake(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
-    init {
-        println("Init Awake Stage")
-        eyesOpen = true
-        inBed = false
-        isDreaming = false
-    }
 
     override fun progressSleepStage() {
         println("Beginning Sleep Stage One")
-        eyesOpen = false
-        inBed = true
-        isDreaming = false
+        sleepSubject.eyesOpen = false
+        sleepSubject.inBed = true
+        sleepSubject.isDreaming = false
         sleepSubject.state = sleepSubject.stageOne
     }
 
@@ -97,101 +95,77 @@ class Awake(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
 }
 
 class StageOne(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
-    init {
-        println("Init Stage One")
-        eyesOpen = false
-        inBed = true
-        isDreaming = false
-    }
 
     override fun progressSleepStage() {
         println("Advanced to Sleep Stage Two")
-        eyesOpen = false
-        inBed = true
-        isDreaming = false
+        sleepSubject.eyesOpen = false
+        sleepSubject.inBed = true
+        sleepSubject.isDreaming = false
         sleepSubject.state = sleepSubject.stageTwo
     }
 
     override fun wakeUp() {
         println("Stage One Interrupted! Woken Up!")
-        eyesOpen = true
-        inBed = false
-        isDreaming = false
+        sleepSubject.eyesOpen = true
+        sleepSubject.inBed = false
+        sleepSubject.isDreaming = false
         sleepSubject.state = sleepSubject.awake
     }
 }
 
 class StageTwo(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
-    init {
-        println("Init Stage Two")
-        eyesOpen = false
-        inBed = true
-        isDreaming = false
-    }
 
     override fun progressSleepStage() {
         println("Advanced to Sleep Stage Three")
-        eyesOpen = false
-        inBed = true
-        isDreaming = false
+        sleepSubject.eyesOpen = false
+        sleepSubject.inBed = true
+        sleepSubject.isDreaming = false
         sleepSubject.state = sleepSubject.stageThree
     }
 
     override fun wakeUp() {
         println("Stage Two Interrupted! Woken Up!")
-        eyesOpen = true
-        inBed = false
-        isDreaming = false
+        sleepSubject.eyesOpen = true
+        sleepSubject.inBed = false
+        sleepSubject.isDreaming = false
         sleepSubject.state = sleepSubject.awake
     }
 }
 
 class StageThree(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
-    init {
-        println("Init Stage Three")
-        eyesOpen = false
-        inBed = true
-        isDreaming = false
-    }
 
     override fun progressSleepStage() {
         println("Advanced to REM Stage")
-        eyesOpen = false
-        inBed = true
-        isDreaming = true
+        sleepSubject.eyesOpen = false
+        sleepSubject.inBed = true
+        sleepSubject.isDreaming = true
         sleepSubject.state = sleepSubject.remStage
     }
 
     override fun wakeUp() {
         println("Stage Three Interrupted! Woken Up!")
-        eyesOpen = true
-        inBed = false
-        isDreaming = false
+        sleepSubject.eyesOpen = true
+        sleepSubject.inBed = false
+        sleepSubject.isDreaming = false
         sleepSubject.state = sleepSubject.awake
     }
 }
 
 class REMStage(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
-    init {
-        println("Init REM Stage")
-        eyesOpen = false
-        inBed = true
-        isDreaming = true
-    }
 
     override fun progressSleepStage() {
         println("Return to Awake Stage!")
-        eyesOpen = true
-        inBed = false
-        isDreaming = false
+        sleepSubject.eyesOpen = true
+        sleepSubject.inBed = false
+        sleepSubject.isDreaming = false
         sleepSubject.state = sleepSubject.awake
     }
 
     override fun wakeUp() {
         println("REM Interrupted! Woken Up!")
-        eyesOpen = true
-        inBed = false
-        isDreaming = false
+        sleepSubject.eyesOpen = true
+        sleepSubject.inBed = false
+        sleepSubject.isDreaming = false
         sleepSubject.state = sleepSubject.awake
     }
 }

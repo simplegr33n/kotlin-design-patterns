@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb31d99c-06db-4a7a-87f9-f11ceb26e0a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_04_state/_04_state.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/_01_singleton/SingletonExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/_01_singleton/SingletonExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_01_singleton/_01_basic_singleton.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/_01_singleton/_01_basic_singleton.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_state/_04_state.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_state/_04_state.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/_04_state/_04_state.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="80" selection-start-line="80" selection-end-line="80" selection-end-column="35" />
+            <state relative-caret-position="357">
+              <caret line="189" column="39" lean-forward="true" selection-start-line="189" selection-start-column="39" selection-end-line="189" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -130,7 +127,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550185458016" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550185860722" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -263,8 +260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/_04_state/_04_state.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" selection-start-line="80" selection-end-line="80" selection-end-column="35" />
+        <state relative-caret-position="357">
+          <caret line="189" column="39" lean-forward="true" selection-start-line="189" selection-start-column="39" selection-end-line="189" selection-end-column="39" />
         </state>
       </provider>
     </entry>
