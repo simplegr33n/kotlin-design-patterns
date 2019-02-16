@@ -7,9 +7,10 @@ fun main() {
     val uiText = Text()
     val uiMenuBar = MenuBar()
 
+    // Composite UI Object
     val uiComposite = CompositeUI(uiMenuBar, uiBackground, uiText)
 
-    // Set Facade to UI Objects
+    // Facade Interface for setting UI Theme
     val themeFacade = ThemeFacade(uiComposite)
 
     // Set theme "Standard"
