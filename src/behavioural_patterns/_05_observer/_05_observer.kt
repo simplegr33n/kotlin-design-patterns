@@ -9,7 +9,7 @@ var localUIInstance: LocalUI? = null
 
 fun main() {
     // Initialize concrete Observable
-    temperatureSensor = TemperatureSensor().initializeThermometer()
+    TemperatureSensor.initializeThermometer()
 
     // Initialize concrete Observers
     cloudStoreInstance = CloudStore()
@@ -42,19 +42,16 @@ abstract class TemperatureObservable {
     }
 }
 
-// Singleton TemperatureObservable (the actual temperature sensor itself is the observable)
-class TemperatureSensor : TemperatureObservable() {
+// TemperatureObservable object (the actual temperature sensor itself is the observable)
+object TemperatureSensor: TemperatureObservable() {
     var SENSOR_TEMPERATURE: Int? = null
 
-    fun initializeThermometer(): TemperatureSensor {
-        if (temperatureSensor == null) {
-            temperatureSensor = TemperatureSensor()
-            temperatureSensor
+    fun initializeThermometer() {
+        temperatureSensor = if (temperatureSensor == null) {
+            TemperatureSensor
         } else {
-            println("Thermometer Already On!")
             temperatureSensor
         }
-        return this
     }
 
     fun changeInTemperature(temperature: Int? = null) {
