@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cb31d99c-06db-4a7a-87f9-f11ceb26e0a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/CloudStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/CloudStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/LocalUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/LocalUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/TemperatureObserver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/TemperatureObserver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/TemperatureSensor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/TemperatureSensor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/_05_observerKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_05_observer/_05_observerKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/behavioural_patterns/_05_observer/_05_observer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/behavioural_patterns/_05_observer/_05_observer.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_04_state/_04_state.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
+            <state relative-caret-position="680">
               <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
             </state>
           </provider>
@@ -44,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_05_observer/_05_observer.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="17" column="94" selection-start-line="17" selection-start-column="94" selection-end-line="17" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -53,7 +58,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/structural_patterns/_03_adapter/_03_adapter.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="561">
               <caret line="33" column="131" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="131" />
             </state>
           </provider>
@@ -85,16 +90,17 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="26" />
-    <option name="y" value="199" />
-    <option name="width" value="1812" />
-    <option name="height" value="882" />
+    <option name="x" value="-1944" />
+    <option name="y" value="-27" />
+    <option name="width" value="1935" />
+    <option name="height" value="1095" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -113,6 +119,13 @@
               <item name="kotlin-design-patterns" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="behavioural_patterns" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlin-design-patterns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlin-design-patterns" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="behavioural_patterns" type="462c0819:PsiDirectoryNode" />
+              <item name="_05_observer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kotlin-design-patterns" type="b2602c69:ProjectViewProjectNode" />
@@ -144,11 +157,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550302321155" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550315540655" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -258,10 +270,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1835" height="1096" extended-state="6" />
+    <frame x="-1927" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17295775" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21275167" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -270,15 +282,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2554517" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2546917" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.25337487" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32707775" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32917964" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32841823" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -293,10 +305,10 @@
     <entry file="file://$PROJECT_DIR$/../../Hackerrank/algorithm-practice/HackerRank/implementation/breaking-best-and-worst-records/breaking-best-and-worst-records.kt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/structural_patterns/_03_adapter/_03_adapter.kt">
+    <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_04_state/_04_state.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="33" column="131" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="131" />
+        <state relative-caret-position="680">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -307,13 +319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_04_state/_04_state.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/creational_patterns/_02_factory_method/_02_factory_method.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -321,10 +326,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/structural_patterns/_03_adapter/_03_adapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="131" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_05_observer/_05_observer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
+        <state relative-caret-position="289">
+          <caret line="17" column="94" selection-start-line="17" selection-start-column="94" selection-end-line="17" selection-end-column="94" />
         </state>
       </provider>
     </entry>

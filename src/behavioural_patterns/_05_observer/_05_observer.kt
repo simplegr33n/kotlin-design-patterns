@@ -8,19 +8,18 @@ var cloudStoreInstance: CloudStore? = null
 var localUIInstance: LocalUI? = null
 
 fun main() {
-    // Initialize concrete TemperatureSensor
-    TemperatureSensor().initializeThermometer()
+    // Initialize concrete Observable
+    temperatureSensor = TemperatureSensor().initializeThermometer()
 
-    // Initialize concrete TemperatureSensor Observers
+    // Initialize concrete Observers
     cloudStoreInstance = CloudStore()
     localUIInstance = LocalUI()
 
     runSimulation() // Simulate changing temperature and observer subscribe/unsubscribe events
-
 }
 
 
-// Abstract TemperatureObservable (temperature observable-side interface)
+// Abstract TemperatureObservable (observable-side interface)
 abstract class TemperatureObservable {
     object TemperatureObserversList: ArrayList<TemperatureObserver>()
 
@@ -43,31 +42,19 @@ abstract class TemperatureObservable {
     }
 }
 
-// Abstract TemperatureObserver (temperature observer-side interface)
-abstract class TemperatureObserver {
-    abstract fun updateTemperature()
-
-    fun subscribeToTemperature() {
-        temperatureSensor?.registerObserver(this)
-        println("$this subscribed to temperature!")
-    }
-
-    fun unsubFromTemperature() {
-        temperatureSensor?.removeObserver(this)
-        println("$this unsubscribed from temperature!")
-    }
-}
-
 // Singleton TemperatureObservable (the actual temperature sensor itself is the observable)
 class TemperatureSensor : TemperatureObservable() {
     var SENSOR_TEMPERATURE: Int? = null
 
-    fun initializeThermometer() {
+    fun initializeThermometer(): TemperatureSensor {
         if (temperatureSensor == null) {
             temperatureSensor = TemperatureSensor()
+            temperatureSensor
         } else {
-            println("TemperatureSensor: Temp Sensor Already On!")
+            println("Thermometer Already On!")
+            temperatureSensor
         }
+        return this
     }
 
     fun changeInTemperature(temperature: Int? = null) {
@@ -91,8 +78,25 @@ class TemperatureSensor : TemperatureObservable() {
 
 }
 
-// Concrete CloudStore observer (subscribing application needing updates)
-class CloudStore : TemperatureObserver() {
+// TODO: make an interface rather than abstract, to allow concrete classes to implement multiple different observer interfaces
+// Abstract TemperatureObserver (observer-side interface)
+abstract class TemperatureObserver {
+
+    abstract fun updateTemperature() // implemented in concrete observer objects
+
+    fun subscribeToTemperature() {
+        temperatureSensor?.registerObserver(this)
+        println("$this subscribed to temperature!")
+    }
+
+    fun unsubFromTemperature() {
+        temperatureSensor?.removeObserver(this)
+        println("$this unsubscribed from temperature!")
+    }
+}
+
+// Concrete CloudStore TemperatureObserver
+class CloudStore: TemperatureObserver() {
     override fun updateTemperature() {
         println("CloudStore: Uploaded Temperature (${temperatureSensor?.SENSOR_TEMPERATURE}°C) to the cloud!")
     }
@@ -102,8 +106,8 @@ class CloudStore : TemperatureObserver() {
     }
 }
 
-// Concrete LocalUI observer (subscribing application needing updates)
-class LocalUI : TemperatureObserver() {
+// Concrete LocalUI TemperatureObserver
+class LocalUI: TemperatureObserver() {
     override fun updateTemperature() {
         println("LocalUI: Displaying Temperature (${temperatureSensor?.SENSOR_TEMPERATURE}°C) locally!")
     }
@@ -112,6 +116,7 @@ class LocalUI : TemperatureObserver() {
         return "LocalUI"
     }
 }
+
 fun runSimulation() {
     simTemperatureChange() // Simulate temperature changes
 
@@ -134,6 +139,5 @@ fun simTemperatureChange() {
     temperatureSensor?.changeInTemperature()
     temperatureSensor?.changeInTemperature()
     temperatureSensor?.changeInTemperature()
-
 }
 
