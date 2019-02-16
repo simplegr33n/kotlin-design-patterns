@@ -1,4 +1,4 @@
-package _04_state
+package behavioural_patterns._04_state
 
 fun main() {
     val sleepSubject = SleepSubject()
@@ -38,7 +38,7 @@ fun main() {
     println(sleepSubject)
 }
 
-
+// Class whose state we want to manage
 class SleepSubject {
     var state: SleepState
 
@@ -46,18 +46,18 @@ class SleepSubject {
     var inBed: Boolean? = null
     var isDreaming: Boolean? = null
 
-    val awake = Awake(this)
-    val stageOne = StageOne(this)
-    val stageTwo = StageTwo(this)
-    val stageThree = StageThree(this)
-    val remStage = REMStage(this)
+    val stateAwake = Awake(this)
+    val stateStageOne = StageOne(this)
+    val stateStageTwo = StageTwo(this)
+    val stateStageThree = StageThree(this)
+    val stateRem = REMStage(this)
 
     init {
         println("\"Wake Up!\"")
         eyesOpen = true
         inBed = false
         isDreaming = false
-        state = awake
+        state = stateAwake
     }
 
     fun progressSleepStage() = state.progressSleepStage()
@@ -86,7 +86,7 @@ class Awake(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
         sleepSubject.eyesOpen = false
         sleepSubject.inBed = true
         sleepSubject.isDreaming = false
-        sleepSubject.state = sleepSubject.stageOne
+        sleepSubject.state = sleepSubject.stateStageOne
     }
 
     override fun wakeUp() {
@@ -101,7 +101,7 @@ class StageOne(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
         sleepSubject.eyesOpen = false
         sleepSubject.inBed = true
         sleepSubject.isDreaming = false
-        sleepSubject.state = sleepSubject.stageTwo
+        sleepSubject.state = sleepSubject.stateStageTwo
     }
 
     override fun wakeUp() {
@@ -109,7 +109,7 @@ class StageOne(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
         sleepSubject.eyesOpen = true
         sleepSubject.inBed = false
         sleepSubject.isDreaming = false
-        sleepSubject.state = sleepSubject.awake
+        sleepSubject.state = sleepSubject.stateAwake
     }
 }
 
@@ -120,7 +120,7 @@ class StageTwo(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
         sleepSubject.eyesOpen = false
         sleepSubject.inBed = true
         sleepSubject.isDreaming = false
-        sleepSubject.state = sleepSubject.stageThree
+        sleepSubject.state = sleepSubject.stateStageThree
     }
 
     override fun wakeUp() {
@@ -128,7 +128,7 @@ class StageTwo(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
         sleepSubject.eyesOpen = true
         sleepSubject.inBed = false
         sleepSubject.isDreaming = false
-        sleepSubject.state = sleepSubject.awake
+        sleepSubject.state = sleepSubject.stateAwake
     }
 }
 
@@ -139,7 +139,7 @@ class StageThree(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
         sleepSubject.eyesOpen = false
         sleepSubject.inBed = true
         sleepSubject.isDreaming = true
-        sleepSubject.state = sleepSubject.remStage
+        sleepSubject.state = sleepSubject.stateRem
     }
 
     override fun wakeUp() {
@@ -147,7 +147,7 @@ class StageThree(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
         sleepSubject.eyesOpen = true
         sleepSubject.inBed = false
         sleepSubject.isDreaming = false
-        sleepSubject.state = sleepSubject.awake
+        sleepSubject.state = sleepSubject.stateAwake
     }
 }
 
@@ -158,7 +158,7 @@ class REMStage(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
         sleepSubject.eyesOpen = true
         sleepSubject.inBed = false
         sleepSubject.isDreaming = false
-        sleepSubject.state = sleepSubject.awake
+        sleepSubject.state = sleepSubject.stateAwake
     }
 
     override fun wakeUp() {
@@ -166,7 +166,7 @@ class REMStage(sleepSubject: SleepSubject) : SleepState(sleepSubject) {
         sleepSubject.eyesOpen = true
         sleepSubject.inBed = false
         sleepSubject.isDreaming = false
-        sleepSubject.state = sleepSubject.awake
+        sleepSubject.state = sleepSubject.stateAwake
     }
 }
 

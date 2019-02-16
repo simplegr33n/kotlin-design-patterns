@@ -1,4 +1,4 @@
-package _01_singleton
+package creational_patterns._01_singleton
 
 
 var singletonInstance: SingletonExample? = null

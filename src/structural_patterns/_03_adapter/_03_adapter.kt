@@ -1,4 +1,4 @@
-package _03_adapter
+package structural_patterns._03_adapter
 
 
 fun main() {
