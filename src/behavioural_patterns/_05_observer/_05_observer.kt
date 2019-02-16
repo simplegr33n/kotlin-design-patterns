@@ -8,30 +8,14 @@ var cloudStoreInstance: CloudStore? = null
 var localUIInstance: LocalUI? = null
 
 fun main() {
+    // Initialize concrete TemperatureSensor
     TemperatureSensor().initializeThermometer()
+
+    // Initialize concrete TemperatureSensor Observers
     cloudStoreInstance = CloudStore()
-    cloudStoreInstance?.subscribeToTemperature()
     localUIInstance = LocalUI()
-    localUIInstance?.subscribeToTemperature()
 
-
-    temperatureSensor?.changeInTemperature(10)
-    temperatureSensor?.changeInTemperature(9)
-    temperatureSensor?.changeInTemperature(8)
-    temperatureSensor?.changeInTemperature(7)
-    temperatureSensor?.changeInTemperature(7)
-    temperatureSensor?.changeInTemperature(7)
-    temperatureSensor?.changeInTemperature(7)
-    temperatureSensor?.changeInTemperature(7)
-    temperatureSensor?.changeInTemperature(7)
-    temperatureSensor?.changeInTemperature(-31)
-
-    localUIInstance?.unsubFromTemperature()
-
-    temperatureSensor?.changeInTemperature(300)
-    temperatureSensor?.changeInTemperature(400)
-    temperatureSensor?.changeInTemperature(800)
-    temperatureSensor?.changeInTemperature(7786)
+    runSimulation() // Simulate changing temperature and observer subscribe/unsubscribe events
 
 }
 
@@ -52,6 +36,10 @@ abstract class TemperatureObservable {
         for (observer in TemperatureObserversList) {
             observer.updateTemperature()
         }
+    }
+
+    fun getTotalSubscribers(): Int {
+        return TemperatureObserversList.size
     }
 }
 
@@ -84,24 +72,19 @@ class TemperatureSensor : TemperatureObservable() {
 
     fun changeInTemperature(temperature: Int? = null) {
         if (temperature != null) {
+            // Temperature parameter set, use it to set temperature
+            println("$SENSOR_TEMPERATURE°C -> $temperature°C || Subscribers (${getTotalSubscribers()})")
             if (temperature != SENSOR_TEMPERATURE) {
-                println("$SENSOR_TEMPERATURE°C -> $temperature°C")
-                // Temperature paramater set, updateTemperature sensor temp and updateTemperature observers!
                 SENSOR_TEMPERATURE = temperature
                 notifyObservers()
-            } else {
-                println("$SENSOR_TEMPERATURE°C -> $temperature°C")
             }
         } else {
             // Temperature parameter not set, find new random temperature
             val randTemp = Random.nextInt(-40, 40)
+            println("$SENSOR_TEMPERATURE°C -> $randTemp°C || Subscribers (${getTotalSubscribers()})")
             if (randTemp != SENSOR_TEMPERATURE) {
-                println("$SENSOR_TEMPERATURE°C -> $temperature°C")
-                // Temperature different from before, updateTemperature sensor temp and updateTemperature observers!
                 SENSOR_TEMPERATURE = randTemp
                 notifyObservers()
-            } else {
-                println("$SENSOR_TEMPERATURE°C -> $temperature°C")
             }
         }
     }
@@ -128,5 +111,29 @@ class LocalUI : TemperatureObserver() {
     override fun toString(): String {
         return "LocalUI"
     }
+}
+fun runSimulation() {
+    simTemperatureChange() // Simulate temperature changes
+
+    cloudStoreInstance?.subscribeToTemperature()
+    localUIInstance?.subscribeToTemperature()
+    simTemperatureChange() // Simulate temperature changes; CloudStore and LocalUI Observers now subscribed
+
+    localUIInstance?.unsubFromTemperature()
+    simTemperatureChange() // Simulate temperature changes; Local Observer now unsubscribed
+}
+
+fun simTemperatureChange() {
+    temperatureSensor?.changeInTemperature()
+    temperatureSensor?.changeInTemperature()
+    temperatureSensor?.changeInTemperature()
+    temperatureSensor?.changeInTemperature(7)
+    temperatureSensor?.changeInTemperature(7)
+    temperatureSensor?.changeInTemperature(7)
+    temperatureSensor?.changeInTemperature(7)
+    temperatureSensor?.changeInTemperature()
+    temperatureSensor?.changeInTemperature()
+    temperatureSensor?.changeInTemperature()
+
 }
 
