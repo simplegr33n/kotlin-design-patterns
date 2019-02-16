@@ -58,6 +58,16 @@ abstract class TemperatureObservable {
 // Abstract TemperatureObserver (temperature observer-side interface)
 abstract class TemperatureObserver {
     abstract fun updateTemperature()
+
+    fun subscribeToTemperature() {
+        temperatureSensor?.registerObserver(this)
+        println("$this subscribed to temperature!")
+    }
+
+    fun unsubFromTemperature() {
+        temperatureSensor?.removeObserver(this)
+        println("$this unsubscribed from temperature!")
+    }
 }
 
 // Singleton TemperatureObservable (the actual temperature sensor itself is the observable)
@@ -75,23 +85,23 @@ class TemperatureSensor : TemperatureObservable() {
     fun changeInTemperature(temperature: Int? = null) {
         if (temperature != null) {
             if (temperature != SENSOR_TEMPERATURE) {
-                println("TemperatureSensor: Temp change from $SENSOR_TEMPERATURE°C to $temperature°C!")
+                println("$SENSOR_TEMPERATURE°C -> $temperature°C")
                 // Temperature paramater set, updateTemperature sensor temp and updateTemperature observers!
                 SENSOR_TEMPERATURE = temperature
                 notifyObservers()
             } else {
-                println("TemperatureSensor: Temp the same as before, $SENSOR_TEMPERATURE!")
+                println("$SENSOR_TEMPERATURE°C -> $temperature°C")
             }
         } else {
             // Temperature parameter not set, find new random temperature
             val randTemp = Random.nextInt(-40, 40)
             if (randTemp != SENSOR_TEMPERATURE) {
-                println("TemperatureSensor: Temp change from $SENSOR_TEMPERATURE°C to $randTemp°C!")
+                println("$SENSOR_TEMPERATURE°C -> $temperature°C")
                 // Temperature different from before, updateTemperature sensor temp and updateTemperature observers!
                 SENSOR_TEMPERATURE = randTemp
                 notifyObservers()
             } else {
-                println("TemperatureSensor: Temp the same as before, $SENSOR_TEMPERATURE!")
+                println("$SENSOR_TEMPERATURE°C -> $temperature°C")
             }
         }
     }
@@ -104,11 +114,8 @@ class CloudStore : TemperatureObserver() {
         println("CloudStore: Uploaded Temperature (${temperatureSensor?.SENSOR_TEMPERATURE}°C) to the cloud!")
     }
 
-    fun subscribeToTemperature() {
-        temperatureSensor?.registerObserver(this)
-    }
-    fun unsubFromTemperature() {
-        temperatureSensor?.removeObserver(this)
+    override fun toString(): String {
+        return "CloudStore"
     }
 }
 
@@ -118,12 +125,8 @@ class LocalUI : TemperatureObserver() {
         println("LocalUI: Displaying Temperature (${temperatureSensor?.SENSOR_TEMPERATURE}°C) locally!")
     }
 
-    fun subscribeToTemperature() {
-        temperatureSensor?.registerObserver(this)
-    }
-
-    fun unsubFromTemperature() {
-        temperatureSensor?.removeObserver(this)
+    override fun toString(): String {
+        return "LocalUI"
     }
 }
 
