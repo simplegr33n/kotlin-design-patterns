@@ -34,8 +34,8 @@ class FullBody(var partsList: List<String>) {
     var torso: ITorso? = null
     var leftArm: IArm? = null
     var rightArm: IArm? = null
-    var leftLeg: Leg? = null
-    var rightLeg: Leg? = null
+    var leftLeg: ILeg? = null
+    var rightLeg: ILeg? = null
 
     fun buildBody(): FullBody {
         when (partsList[0]) {
@@ -90,44 +90,44 @@ interface IArm {
     var hand: String
     var pitchingSpeed: Int
 }
-interface Leg {
+interface ILeg {
     var side: String
     var foot: String
 }
 
 
 // Concrete IHead Classes
-class RoundHead() : IHead {
+class RoundHead : IHead {
     override var eyes ="Round"
     override var mouth = "0val"
     override var ears = "Circular"
 }
-class SquareHead() : IHead {
+class SquareHead : IHead {
     override var eyes ="Cubic"
     override var mouth = "Blocky"
     override var ears = "Squared"
 }
-class BlueHead() : IHead {
+class BlueHead : IHead {
     override var eyes ="Blue"
     override var mouth = "Azul"
     override var ears = "Bleues"
 }
 
 // Concrete ITorso Classes
-class FatTorso() : ITorso {
+class FatTorso : ITorso {
     override var shape = "Medium"
     override var isHairy = true
 }
-class SlimTorso() : ITorso {
+class SlimTorso : ITorso {
     override var shape = "Medium"
     override var isHairy = false
 }
-class MediumTorso() : ITorso {
+class MediumTorso : ITorso {
     override var shape = "Medium"
     override var isHairy = true
 }
 
-// Concrete Leg Classes
+// Concrete ILeg Classes
 class SuperArm(side: String) : IArm {
     override var side = side
     override var hand = "SuperGrip"
@@ -139,12 +139,12 @@ class NormalArm(side: String) : IArm {
     override var pitchingSpeed = 3
 }
 
-// Concrete Leg Classes
-class LongLeg(side: String) : Leg {
+// Concrete ILeg Classes
+class LongLeg(side: String) : ILeg {
     override var side = side
     override var foot = "Large"
 }
-class ShortLeg(side: String) : Leg {
+class ShortLeg(side: String) : ILeg {
     override var side = side
     override var foot = "Small"
 }
