@@ -130,7 +130,6 @@ class AddBeef(sandwich: Sandwich) : ToppingDecorator(sandwich) {
     override fun info(): String {
         return if (beef >= 1) {
             beef -= 1
-            println("Beef Remaning: $beef")
             itemAdded = true
             sandwich.info() + "+ BEEF\n+ $${"%.2f".format(itemPrice)}\n"
         } else {
@@ -150,7 +149,6 @@ class AddCheddar(sandwich: Sandwich) : ToppingDecorator(sandwich) {
     override fun info(): String {
         return if (cheddar >= 1) {
             cheddar -= 1
-            println("Cheddar Remaning: $cheddar")
             itemAdded = true
             sandwich.info() + "+ CHEDDAR\n+ $${"%.2f".format(itemPrice)}\n"
         } else {
@@ -170,7 +168,6 @@ class AddLettuce(sandwich: Sandwich) : ToppingDecorator(sandwich) {
     override fun info(): String {
         return if (lettuce >= 1) {
             lettuce -= 1
-            println("Lettuce Remaning: $lettuce")
             itemAdded = true
             sandwich.info() + "+ LETTUCE\n+ $${"%.2f".format(itemPrice)}\n"
         } else {

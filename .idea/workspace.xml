@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb31d99c-06db-4a7a-87f9-f11ceb26e0a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/structural_patterns/_08_decorator/_08_decorator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_07_strategy/ClayPerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_07_strategy/ClayPerson.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_07_strategy/FullBody.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_07_strategy/FullBody.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_07_strategy/Leg.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_07_strategy/LongLeg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_07_strategy/LongLeg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_07_strategy/ShortLeg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/behavioural_patterns/_07_strategy/ShortLeg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/behavioural_patterns/_07_strategy/_07_strategy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/behavioural_patterns/_07_strategy/_07_strategy.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structural_patterns/_08_decorator/_08_decorator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural_patterns/_08_decorator/_08_decorator.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +26,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_07_strategy/_07_strategy.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="306">
               <caret line="18" selection-start-line="18" selection-end-line="25" selection-end-column="25" />
             </state>
           </provider>
@@ -41,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/structural_patterns/_08_decorator/_08_decorator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+            <state relative-caret-position="120">
+              <caret line="137" column="5" lean-forward="true" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -83,16 +77,18 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1813" />
-    <option name="y" value="-18" />
-    <option name="width" value="2263" />
-    <option name="height" value="1103" />
+    <option name="x" value="-1929" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,12 +144,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550459209283" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550460214234" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -173,20 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.structural_patterns._08_decorator._08_decoratorKt">
-    <configuration name="behavioural_patterns._04_state._04_stateKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="kotlin-design-patterns" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="behavioural_patterns._04_state._04_stateKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.structural_patterns._09_proxy._09_proxyKt">
     <configuration name="behavioural_patterns._05_observer._05_observerKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-design-patterns" />
       <option name="VM_PARAMETERS" />
@@ -239,13 +220,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="structural_patterns._09_proxy._09_proxyKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin-design-patterns" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="structural_patterns._09_proxy._09_proxyKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.structural_patterns._09_proxy._09_proxyKt" />
         <item itemvalue="Kotlin.structural_patterns._08_decorator._08_decoratorKt" />
         <item itemvalue="Kotlin.behavioural_patterns._07_strategy._07_strategyKt" />
         <item itemvalue="Kotlin.structural_patterns._06_facade._06_facadeKt" />
         <item itemvalue="Kotlin.behavioural_patterns._05_observer._05_observerKt" />
-        <item itemvalue="Kotlin.behavioural_patterns._04_state._04_stateKt" />
       </list>
     </recent_temporary>
   </component>
@@ -263,10 +257,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1927" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1835" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2181208" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1859155" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -275,7 +268,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32707775" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32841823" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32841823" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,13 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_07_strategy/_07_strategy.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" selection-start-line="18" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/creational_patterns/_01_singleton/_01_basic_singleton.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -347,10 +333,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_07_strategy/_07_strategy.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/structural_patterns/_08_decorator/_08_decorator.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+        <state relative-caret-position="120">
+          <caret line="137" column="5" lean-forward="true" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
         </state>
       </provider>
     </entry>
