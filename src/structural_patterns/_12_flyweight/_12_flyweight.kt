@@ -33,15 +33,12 @@ fun main() {
 
 // Enemy Populator
 class EnemyPopulator(var factoryType: String) {
-    var enemyFactory: EnemyFactory? = null
-    var enemyList: ArrayList<Enemy> = ArrayList()
+    lateinit var enemyFactory: EnemyFactory
 
     fun initPopulator() {
         if (factoryType == "Flyweight") {
-            enemyList = structural_patterns._12_flyweight.enemyList
             enemyFactory = FlyweightFactory
         } else {
-            enemyList = enemyList
             enemyFactory = NonFlyweightFactory
         }
     }
@@ -50,20 +47,23 @@ class EnemyPopulator(var factoryType: String) {
 
         val startTime = System.currentTimeMillis()
         for (i in 0..TOTAL_ENEMIES) {
-            enemyFactory?.itIsAGoodDayToDie()
+            enemyFactory.itIsAGoodDayToDie()
         }
         val endTime = System.currentTimeMillis()
 
         if (enemyList.size >= 4) {
-            println("""
-        ${enemyList[0]}
-        ${enemyList[1]}
-        ${enemyList[2]}
-        ${enemyList[3]}
+            println("""-----------------------
+$factoryType Data:
+-----------------------
+        data[0]: ${enemyList[0]}
+        data[1]: ${enemyList[1]}
+        data[2]: ${enemyList[2]}
+        data[3]: ${enemyList[3]}
+        ...
         """)
         }
 
-        println("$factoryType took ${endTime - startTime} milliseconds\n====================================")
+        println("========================================================================\n$factoryType took ${endTime - startTime} milliseconds to create ${enemyList.size} items\n========================================================================")
 
     }
 }
@@ -150,9 +150,13 @@ abstract class Enemy : Cloneable {
             demoList.add(demoValue)
         }
         createEnemyCounter++
-        println("createEnemy() called $createEnemyCounter times")
+        println("  createEnemy() called $createEnemyCounter times [item no:${enemyList.size + 1}]")
 
         return this
+    }
+
+    override fun toString(): String {
+        return "$name ($xPos x, $yPos y) |"
     }
 
 }
@@ -169,10 +173,6 @@ class FlyingEnemy(xPos: Int?, yPos: Int?) : Enemy() {
 
     override fun attack() {
 
-    }
-
-    override fun toString(): String {
-        return "$name x: $xPos y: $yPos |"
     }
 
     override fun clone(): Enemy {
@@ -193,10 +193,6 @@ class MeleeEnemy(xPos: Int?, yPos: Int?) : Enemy() {
 
     }
 
-    override fun toString(): String {
-        return "$name x: $xPos y: $yPos |"
-    }
-
     override fun clone(): Enemy {
         return MeleeEnemy(randX, randY)
     }
@@ -212,10 +208,6 @@ class RangedEnemy(xPos: Int?, yPos: Int?) : Enemy() {
 
     override fun attack() {
 
-    }
-
-    override fun toString(): String {
-        return "$name x: $xPos y: $yPos |"
     }
 
     override fun clone(): Enemy {
