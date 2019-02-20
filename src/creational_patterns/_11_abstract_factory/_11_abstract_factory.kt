@@ -1,13 +1,32 @@
 package creational_patterns._11_abstract_factory
 
+
+val ANDROID_FACTORY = AndroidPlatformFactory()
+val MAC_FACTORY = MacPlatformFactory()
+val PC_FACTORY = PCPlatformFactory()
+val PLAYSTATION_FACTORY = PlaystationPlatformFactory()
+
 class Game(var name: String, var size: Float)
 
-abstract class GameFactory {
+enum class Platform {
+    ANDROID, MAC, PC, PLAYSTATION
+}
+
+fun getFactoryPlatform(platform: Platform) : AbstractGameFactory {
+    when (platform) {
+        Platform.ANDROID -> return ANDROID_FACTORY
+        Platform.MAC -> return MAC_FACTORY
+        Platform.PC -> return PC_FACTORY
+        Platform.PLAYSTATION -> return PLAYSTATION_FACTORY
+    }
+}
+
+abstract class AbstractGameFactory {
     abstract fun compileGame(game: Game)
     abstract fun printCover(game: Game)
 }
 
-class AndroidPlatformFactory : GameFactory() {
+class AndroidPlatformFactory : AbstractGameFactory() {
     override fun compileGame(game: Game) {
         println("${game.name.replace("\\s".toRegex(), "")}.apk compiled for Android...")
         println("| APK FILE-SIZE:  ${game.size * 1.3}MB")
@@ -25,7 +44,7 @@ class AndroidPlatformFactory : GameFactory() {
     }
 }
 
-class MacPlatformFactory : GameFactory() {
+class MacPlatformFactory : AbstractGameFactory() {
     override fun compileGame(game: Game) {
         println("${game.name.replace("\\s".toRegex(), "")}.dmg compiled for MacOS...")
         println("| DMG FILE-SIZE:  ${game.size * 2.6}MB")
@@ -43,7 +62,7 @@ class MacPlatformFactory : GameFactory() {
     }
 }
 
-class PCPlatformFactory : GameFactory() {
+class PCPlatformFactory : AbstractGameFactory() {
     override fun compileGame(game: Game) {
         println("${game.name.replace("\\s".toRegex(), "")}.exe compiled for Windows...")
         println("| EXE FILE-SIZE:  ${game.size * 1.6}MB")
@@ -61,7 +80,7 @@ class PCPlatformFactory : GameFactory() {
     }
 }
 
-class PlaystationPlatformFactory : GameFactory() {
+class PlaystationPlatformFactory : AbstractGameFactory() {
     override fun compileGame(game: Game) {
         println("${game.name.replace("\\s".toRegex(), "")}.ps4 compiled for Playstation...")
         println("| PS4 FILE-SIZE:  ${game.size * 3}MB")
@@ -87,22 +106,17 @@ fun main() {
     val halflifeTwo = Game("Halflife 2", 1448f)
     val warcraftFour = Game("Warcraft IV", 2862f)
 
-    // Create Game Compilers
-    val androidPlatformFactory: GameFactory = AndroidPlatformFactory()
-    val macPlatformFactory: GameFactory = MacPlatformFactory()
-    val pcPlatformFactory: GameFactory = PCPlatformFactory()
-    val playstationFactory: GameFactory = PlaystationPlatformFactory()
+    // Create Android Game Factory
+    var gameFactory: AbstractGameFactory = getFactoryPlatform(Platform.ANDROID)
+    // call factory methods
+    gameFactory.compileGame(halflifeTwo)
+    gameFactory.printCover(halflifeTwo)
 
-    playstationFactory.compileGame(halflifeTwo)
-    playstationFactory.compileGame(warcraftFour)
+    // Change Game Factory to PC
+    gameFactory = getFactoryPlatform(Platform.PC)
+    // call factory methods
+    gameFactory.compileGame(warcraftFour)
+    gameFactory.printCover(warcraftFour)
 
-    androidPlatformFactory.compileGame(halflifeTwo)
 
-    macPlatformFactory.compileGame(warcraftFour)
-
-    pcPlatformFactory.compileGame(warcraftFour)
-
-    pcPlatformFactory.printCover(warcraftFour)
-
-    macPlatformFactory.printCover(halflifeTwo)
 }
