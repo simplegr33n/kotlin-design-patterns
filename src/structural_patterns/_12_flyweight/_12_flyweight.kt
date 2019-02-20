@@ -6,22 +6,28 @@ val TOTAL_ENEMIES: Int = 999
 val RANGE_X: Int = 10000
 val RANGE_Y: Int = 10000
 
-val nonFlyweightEnemyList = ArrayList<Enemy>()
-val flyweightEnemyList = ArrayList<Enemy>()
+var createEnemyCounter = 0
+val enemyList = ArrayList<Enemy>()
 
 
 fun main() {
     var enemyPopulator: EnemyPopulator
 
-    // FW Test
+    // Non-Flyweight Test
+    enemyPopulator = EnemyPopulator("Non-Flyweight")
+    enemyPopulator.initPopulator()
+    enemyPopulator.populate()
+
+    enemyList.clear()
+    createEnemyCounter = 0
+
+    // Flyweight Test (EXTRINSIC: x/y position | INTRINSIC: all other Enemy object variables)
     enemyPopulator = EnemyPopulator("Flyweight")
     enemyPopulator.initPopulator()
     enemyPopulator.populate()
 
-    // NFW Test
-    enemyPopulator = EnemyPopulator("Non-Flyweight")
-    enemyPopulator.initPopulator()
-    enemyPopulator.populate()
+    enemyList.clear()
+    createEnemyCounter = 0
 
 }
 
@@ -32,14 +38,13 @@ class EnemyPopulator(var factoryType: String) {
 
     fun initPopulator() {
         if (factoryType == "Flyweight") {
-            enemyList = flyweightEnemyList
+            enemyList = structural_patterns._12_flyweight.enemyList
             enemyFactory = FlyweightFactory
         } else {
-            enemyList = nonFlyweightEnemyList
+            enemyList = enemyList
             enemyFactory = NonFlyweightFactory
         }
     }
-
 
     fun populate() {
 
@@ -49,8 +54,8 @@ class EnemyPopulator(var factoryType: String) {
         }
         val endTime = System.currentTimeMillis()
 
-        if (enemyList.size > 0) {
-            println(""""
+        if (enemyList.size >= 4) {
+            println("""
         ${enemyList[0]}
         ${enemyList[1]}
         ${enemyList[2]}
@@ -58,7 +63,8 @@ class EnemyPopulator(var factoryType: String) {
         """)
         }
 
-        println("$factoryType took " + (endTime - startTime) + " milliseconds")
+        println("$factoryType took ${endTime - startTime} milliseconds\n====================================")
+
     }
 }
 
@@ -78,11 +84,11 @@ object NonFlyweightFactory : EnemyFactory() {
 
         // Create a new Enemy object for each for loop iteration
         when (randInt) {
-            0 -> nonFlyweightEnemyList.add(FlyingEnemy(randX, randY).initEnemy())
-            1 -> nonFlyweightEnemyList.add(MeleeEnemy(randX, randY).initEnemy())
-            2 -> nonFlyweightEnemyList.add(RangedEnemy(randX, randY).initEnemy())
+            0 -> enemyList.add(FlyingEnemy(randX, randY).createEnemy())
+            1 -> enemyList.add(MeleeEnemy(randX, randY).createEnemy())
+            2 -> enemyList.add(RangedEnemy(randX, randY).createEnemy())
         }
-        return nonFlyweightEnemyList.last()
+        return enemyList.last()
     }
 }
 
@@ -101,9 +107,9 @@ object FlyweightFactory : EnemyFactory() {
         var protoEnemy: Enemy? = enemyByIndex[randInt]
         if (protoEnemy == null) {
             when (randInt) {
-                0 -> protoEnemy = FlyingEnemy(0, 0).initEnemy()
-                1 -> protoEnemy = MeleeEnemy(0, 0).initEnemy()
-                2 -> protoEnemy = RangedEnemy(0, 0).initEnemy()
+                0 -> protoEnemy = FlyingEnemy(0, 0).createEnemy()
+                1 -> protoEnemy = MeleeEnemy(0, 0).createEnemy()
+                2 -> protoEnemy = RangedEnemy(0, 0).createEnemy()
             }
             // Add new Enemy to the HashMap
             enemyByIndex[randInt] = protoEnemy as Enemy
@@ -113,7 +119,7 @@ object FlyweightFactory : EnemyFactory() {
         newEnemy.xPos = randX
         newEnemy.yPos = randY
 
-        flyweightEnemyList.add(newEnemy)
+        enemyList.add(newEnemy)
         return newEnemy
     }
 
@@ -131,9 +137,10 @@ abstract class Enemy : Cloneable {
     abstract fun attack()
     public abstract override fun clone(): Enemy
 
-    fun initEnemy(): Enemy {
-        // demonstration expensive init function for object
-        // is Intrinsic, so shouldn't be called for every  new instance
+    fun createEnemy(): Enemy {
+        // Demonstration of an expensive init function for an object
+        // which theoretically could be Intrinsic, so shouldn't be
+        // called for every new object instance
         val demoList: ArrayList<Int> = ArrayList()
         for (i in 0..TOTAL_ENEMIES) {
             var demoValue: Int = 1
@@ -141,8 +148,9 @@ abstract class Enemy : Cloneable {
                 demoValue += demoList[x]
             }
             demoList.add(demoValue)
-            //println(demoValue)
         }
+        createEnemyCounter++
+        println("createEnemy() called $createEnemyCounter times")
 
         return this
     }

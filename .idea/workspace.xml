@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb31d99c-06db-4a7a-87f9-f11ceb26e0a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/META-INF/kotlin-design-patterns.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/META-INF/kotlin-design-patterns.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/FlyingEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/FlyingEnemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/FlyweightFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/FlyweightFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/MeleeEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/MeleeEnemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/NonFlyweightFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/NonFlyweightFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/RangedEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/RangedEnemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/_01_flyweightKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_01_flyweight.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="111" column="48" selection-start-line="111" selection-start-column="48" selection-end-line="111" selection-end-column="48" />
+            <state relative-caret-position="493">
+              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -191,7 +182,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550700692723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550701399246" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -318,7 +309,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32573727" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32502595" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3281412" />
@@ -415,8 +406,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="111" column="48" selection-start-line="111" selection-start-column="48" selection-end-line="111" selection-end-column="48" />
+        <state relative-caret-position="493">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
         </state>
       </provider>
     </entry>
