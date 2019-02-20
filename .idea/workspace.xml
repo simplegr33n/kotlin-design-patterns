@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb31d99c-06db-4a7a-87f9-f11ceb26e0a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/creational_patterns/_11_abstract_factory/_11_abstract_factory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/creational_patterns/_11_abstract_factory/_11_abstract_factory.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/structural_patterns/_09_proxy/_09_proxy.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="17">
               <caret line="3" column="71" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
             </state>
           </provider>
@@ -53,17 +52,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_10_command/_10_command.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
+            <state relative-caret-position="2125">
               <caret line="125" column="1" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/creational_patterns/_11_abstract_factory/_11_abstract_factory.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="128" column="4" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
+            <state relative-caret-position="1768">
+              <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -71,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/creational_patterns/_02_factory_method/_02_factory_method.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -116,16 +115,18 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2233" />
-    <option name="y" value="-19" />
-    <option name="width" value="2265" />
-    <option name="height" value="1103" />
+    <option name="x" value="-1929" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,21 +156,8 @@
               <item name="kotlin-design-patterns" type="b2602c69:ProjectViewProjectNode" />
               <item name="kotlin-design-patterns" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="creational_patterns" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kotlin-design-patterns" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kotlin-design-patterns" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="creational_patterns" type="462c0819:PsiDirectoryNode" />
-              <item name="_01_singleton" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kotlin-design-patterns" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kotlin-design-patterns" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="creational_patterns" type="462c0819:PsiDirectoryNode" />
-              <item name="_02_factory_method" type="462c0819:PsiDirectoryNode" />
+              <item name="behavioural_patterns" type="462c0819:PsiDirectoryNode" />
+              <item name="_10_command" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kotlin-design-patterns" type="b2602c69:ProjectViewProjectNode" />
@@ -184,16 +172,21 @@
               <item name="structural_patterns" type="462c0819:PsiDirectoryNode" />
               <item name="_08_decorator" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="kotlin-design-patterns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlin-design-patterns" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="structural_patterns" type="462c0819:PsiDirectoryNode" />
+              <item name="_09_proxy" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550623772571" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550692079939" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -213,20 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.creational_patterns._11_abstract_factory._11_abstract_factoryKt">
-    <configuration name="behavioural_patterns._07_strategy._07_strategyKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="kotlin-design-patterns" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="behavioural_patterns._07_strategy._07_strategyKt" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.structural_patterns._12_flyweight._01_flyweightKt">
     <configuration name="behavioural_patterns._10_command._10_commandKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="kotlin-design-patterns" />
       <option name="VM_PARAMETERS" />
@@ -279,13 +259,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="structural_patterns._12_flyweight._01_flyweightKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="kotlin-design-patterns" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="structural_patterns._12_flyweight._01_flyweightKt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.structural_patterns._12_flyweight._01_flyweightKt" />
         <item itemvalue="Kotlin.creational_patterns._11_abstract_factory._11_abstract_factoryKt" />
         <item itemvalue="Kotlin.behavioural_patterns._10_command._10_commandKt" />
         <item itemvalue="Kotlin.structural_patterns._09_proxy._09_proxyKt" />
         <item itemvalue="Kotlin.structural_patterns._08_decorator._08_decoratorKt" />
-        <item itemvalue="Kotlin.behavioural_patterns._07_strategy._07_strategyKt" />
       </list>
     </recent_temporary>
   </component>
@@ -303,10 +296,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1927" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1450" height="878" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23020135" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23381294" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -315,12 +307,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32707775" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3281412" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32707775" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32573727" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32573727" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32841823" />
@@ -387,31 +379,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/structural_patterns/_09_proxy/_09_proxy.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="71" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_10_command/_10_command.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
+        <state relative-caret-position="2125">
           <caret line="125" column="1" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/creational_patterns/_02_factory_method/_02_factory_method.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/creational_patterns/_11_abstract_factory/_11_abstract_factory.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="128" column="4" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
+        <state relative-caret-position="1768">
+          <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/creational_patterns/_02_factory_method/_02_factory_method.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structural_patterns/_09_proxy/_09_proxy.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="71" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
         </state>
       </provider>
     </entry>
