@@ -3,8 +3,8 @@ package creational_patterns._13_prototype
 import java.util.HashMap
 
 
-internal interface TerranUnit {
-    fun clone(): TerranUnit
+internal interface TerranUnit : Cloneable {
+    public override fun clone(): TerranUnit
 }
 
 internal class JimRaynor : TerranUnit {
@@ -63,7 +63,6 @@ internal object CloneFactory {
 
     fun getCloneFromPrototype(type: String): TerranUnit? {
 
-
         try {
             println("Returning clone of: $type")
             return prototypes[type]?.clone()
@@ -71,7 +70,6 @@ internal object CloneFactory {
             println("Prototype with name: $type, doesn't exist")
             return null
         }
-
     }
 }
 
