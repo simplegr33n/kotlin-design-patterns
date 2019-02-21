@@ -13,6 +13,14 @@ val enemyList = ArrayList<Enemy>()
 fun main() {
     var enemyPopulator: EnemyPopulator
 
+    // Flyweight Test (EXTRINSIC: x/y position | INTRINSIC: all other Enemy object variables)
+    enemyPopulator = EnemyPopulator("Flyweight")
+    enemyPopulator.initPopulator()
+    enemyPopulator.populate()
+
+    enemyList.clear()
+    createEnemyCounter = 0
+
     // Non-Flyweight Test
     enemyPopulator = EnemyPopulator("Non-Flyweight")
     enemyPopulator.initPopulator()
@@ -63,7 +71,11 @@ $factoryType Data:
         """)
         }
 
-        println("========================================================================\n$factoryType took ${endTime - startTime} milliseconds to create ${enemyList.size} items\n========================================================================")
+        println("""
+            ========================================================================
+            $factoryType took ${endTime - startTime} milliseconds to create ${enemyList.size} items
+            ========================================================================
+            """)
 
     }
 }

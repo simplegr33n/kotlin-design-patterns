@@ -4,10 +4,12 @@
     <list default="true" id="cb31d99c-06db-4a7a-87f9-f11ceb26e0a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/EnemyFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/EnemyFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/EnemyPopulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/EnemyPopulator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/FlyingEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/FlyingEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/FlyweightFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/FlyweightFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/MeleeEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/MeleeEnemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/NonFlyweightFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/NonFlyweightFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/RangedEnemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/RangedEnemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/_12_flyweightKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlin-design-patterns/structural_patterns/_12_flyweight/_12_flyweightKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt" afterDir="false" />
@@ -22,73 +24,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/creational_patterns/_01_singleton/_01_basic_singleton.kt">
+        <entry file="file://$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" selection-start-line="25" selection-end-line="35" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_07_strategy/_07_strategy.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="25" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/structural_patterns/_08_decorator/_08_decorator.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2329">
-              <caret line="137" column="5" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/structural_patterns/_09_proxy/_09_proxy.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="71" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
+            <state relative-caret-position="881">
+              <caret line="146" column="34" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt">
+        <entry file="file://$PROJECT_DIR$/src/structural_patterns/_08_decorator/_08_decorator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/behavioural_patterns/_10_command/_10_command.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2125">
-              <caret line="125" column="1" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/creational_patterns/_11_abstract_factory/_11_abstract_factory.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/creational_patterns/_02_factory_method/_02_factory_method.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="-989">
+              <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -135,16 +83,18 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1898" />
-    <option name="y" value="-12" />
-    <option name="width" value="2265" />
-    <option name="height" value="1103" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,18 +130,23 @@
               <item name="kotlin-design-patterns" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="structural_patterns" type="462c0819:PsiDirectoryNode" />
+              <item name="_08_decorator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kotlin-design-patterns" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kotlin-design-patterns" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="structural_patterns" type="462c0819:PsiDirectoryNode" />
               <item name="_12_flyweight" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550702823021" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550736887866" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -301,10 +256,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1927" y="-7" width="1550" height="878" extended-state="6" />
+    <frame x="-8" y="-8" width="1835" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2852349" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31267604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -313,7 +268,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32707775" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.48659518" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5670241" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994638" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -378,13 +333,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/structural_patterns/_08_decorator/_08_decorator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="137" column="5" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/structural_patterns/_09_proxy/_09_proxy.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -415,8 +363,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/structural_patterns/_12_flyweight/_12_flyweight.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="881">
+          <caret line="146" column="34" selection-start-line="146" selection-start-column="34" selection-end-line="146" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/structural_patterns/_08_decorator/_08_decorator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-989">
+          <caret line="80" column="33" lean-forward="true" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
         </state>
       </provider>
     </entry>
